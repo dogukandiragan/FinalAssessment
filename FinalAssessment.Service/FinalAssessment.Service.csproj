@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="6.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FinalAssessment.Core\FinalAssessment.Core.csproj" />
+    <ProjectReference Include="..\FinalAssessment.Data\FinalAssessment.Data.csproj" />
+    <ProjectReference Include="..\FinalAssessment.Shared\FinalAssessment.Shared.csproj" />
+    <ProjectReference Include="..\FinalAssessment.WorkerService\FinalAssessment.WorkerService.csproj" />
+  </ItemGroup>
+
+</Project>
