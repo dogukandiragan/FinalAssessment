@@ -47,6 +47,8 @@ namespace FinalAssessment.Controllers
             return Ok(await _userManager.AddToRoleAsync(user, "Admin"));
         }
 
+
+
         [HttpPost("/AddEditor")]
         public async Task<IActionResult> RoleAssignEditor(string name)
         {

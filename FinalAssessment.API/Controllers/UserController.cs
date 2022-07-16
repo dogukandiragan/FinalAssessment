@@ -18,17 +18,16 @@ namespace FinalAssessment.Controllers
             _userService = userService;
         }
 
+
+
         [HttpPost]
         public async Task<IActionResult> CreateUser(CreateUserDto createUserDto)
         {
-             
             return Ok(await _userService.CreateUserAsync(createUserDto));
         }
 
 
 
-
-        [Authorize]
         [HttpGet]
         public  IActionResult GetUsers()
         {
