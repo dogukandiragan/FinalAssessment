@@ -10,17 +10,14 @@ namespace FinalAssessment.Shared
 {
     public class ExcelCreator  
     {
-
-        public ExcelCreator()
-        {
-
-        }
-
  
 
-        public void CreateExcelMonthly( List<MonthlyReportDto> MonthlyReportData)
+        public string CreateExcelMonthly( List<MonthlyReportDto> MonthlyReportData)
         {
- 
+            
+            string savePath = @"/ExcelReports/MonthlyReport" + DateTime.Now.ToShortDateString() + ".xls";
+
+
             using (var workbook = new XLWorkbook())
             {
 
@@ -39,16 +36,20 @@ namespace FinalAssessment.Shared
                     row++;    
 
                 }
-             
-                workbook.SaveAs(@"/ExcelReports/MonthlyReport"+DateTime.Now.ToShortDateString()+".xls");
+
+                workbook.SaveAs(savePath);
+               
 
             }
+
+            return savePath;
 
         }
 
 
-        public void CreateExcelWeekly(List<WeeklyReportDto> WeeklyReportData)
+        public string CreateExcelWeekly(List<WeeklyReportDto> WeeklyReportData)
         {
+            string savePath = @"/ExcelReports/WeeklyReport" + DateTime.Now.ToShortDateString() + ".xls";
 
             using (var workbook = new XLWorkbook())
             {
@@ -78,11 +79,12 @@ namespace FinalAssessment.Shared
 
                 }
 
-                workbook.SaveAs(@"/ExcelReports/WeeklyReport" + DateTime.Now.ToShortDateString() + ".xls");
+                
+                workbook.SaveAs(savePath);
 
             }
 
-
+            return savePath;
 
         }
 

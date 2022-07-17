@@ -2,6 +2,7 @@
 using FinalAssessment.Core.DTOs;
 using FinalAssessment.Core.Models;
 using FinalAssessment.Core.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FinalAssessment.API.Controllers

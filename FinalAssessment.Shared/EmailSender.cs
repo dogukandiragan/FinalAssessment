@@ -11,14 +11,8 @@ namespace FinalAssessment.Shared
  
     public class EmailSender
     {
-        public EmailSender()
-        {
 
-        }
- 
-
-
-        public void SendIt(List<string> adresses, object excel)
+        public void SendIt(List<string> adresses, string filePath)
         {
             foreach(string adress in adresses)
             {
@@ -32,7 +26,7 @@ namespace FinalAssessment.Shared
                 htmlBody = "İyi Çalışmalar";
                 mail.Body = htmlBody;
                 Attachment attachment;
-                attachment = new Attachment(@"FinalAssessment.Shared/ExcelReports/WeeklyReport" + DateTime.Now.ToShortDateString() + ".xls");
+                attachment = new Attachment(filePath);
                 mail.Attachments.Add(attachment);
                 SmtpServer.Port = 587;
                 SmtpServer.UseDefaultCredentials = false;

@@ -3,6 +3,7 @@ using FinalAssessment.Core.DTOs;
 using FinalAssessment.Core.Models;
 using FinalAssessment.Core.Services;
 using FinalAssessment.Service.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 

@@ -13,8 +13,8 @@ namespace FinalAssessment.API.Quartz
         }
         public Task Execute(IJobExecutionContext context)
         {
-            object o = new object();
-            es.SendIt(receiverlist, o);
+           
+            es.SendIt(receiverlist, "");
             return Task.CompletedTask;
         }
 
