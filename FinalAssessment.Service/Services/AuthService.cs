@@ -9,6 +9,9 @@ using FinalAssessment.Core.UnitOfWork;
 
 namespace FinalAssessment.Service.Services
 {
+
+    // Authentication Processes
+
     public class AuthService : IAuthService
     {
       

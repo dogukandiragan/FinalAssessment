@@ -1,29 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
+
 
 namespace FinalAssessment.WorkerService
 {
  
     public class Watermark : BackgroundService
     {
-        public Watermark()
-        {
-
-        }
-
-        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
-        {
-            while (!stoppingToken.IsCancellationRequested)
-            {
-                await Task.Delay(100, stoppingToken);
-            }
-        }
-
-
+ 
+        //image watermarking process.
+        //it gets original image path and answers both watermarked image and its path
         public static Tuple<byte[], string> watermarked(string sourceImage)
         {
 
@@ -65,7 +50,7 @@ namespace FinalAssessment.WorkerService
             graphics.Dispose();
 #pragma warning restore CA1416 // Validate platform compatibility
 
-        
+
 
 #pragma warning disable CA1416 // Validate platform compatibility
             string watermarked_path = "c:/" + Guid.NewGuid().ToString() + ".jpg";
@@ -79,6 +64,22 @@ namespace FinalAssessment.WorkerService
             return Tuple.Create(System.IO.File.ReadAllBytes(watermarked_path), watermarked_path);
 
         }
+
+        protected override Task ExecuteAsync(CancellationToken stoppingToken)
+        {
+            return Task.CompletedTask;
+        }
+
+        public override Task StartAsync(CancellationToken cancellationToken)
+        {
+            return base.StartAsync(cancellationToken);
+        }
+
+        public override Task StopAsync(CancellationToken cancellationToken)
+        {
+            return base.StopAsync(cancellationToken);
+        }
+
 
     }
 }

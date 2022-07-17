@@ -19,6 +19,7 @@ namespace FinalAssessment.Service.Services
                 
     }
 
+        // create to user for identity
         public async Task<Response<UserAppDto>> CreateUserAsync(CreateUserDto createUserDto)
         {
             var user = new UserApp { Email = createUserDto.Email, UserName = createUserDto.UserName };
@@ -34,6 +35,8 @@ namespace FinalAssessment.Service.Services
             return Response<UserAppDto>.Success(_mapper.Map<UserAppDto>(user), 200);
         }
 
+
+        //get all users
         public Response<IEnumerable<UserAppDto>> GetAllUser()
         {
             var users =  _userManager.Users.ToList();

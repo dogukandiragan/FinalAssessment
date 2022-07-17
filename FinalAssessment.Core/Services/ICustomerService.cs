@@ -7,7 +7,7 @@ namespace FinalAssessment.Service.Services
     public interface ICustomerService : IService<CustomerApp>
     {
          
-        Task<List<MonthlyReportDto>> GetCityListWithSP();
+        List<MonthlyReportDto> GetCityListWithSP();
 
 
     }

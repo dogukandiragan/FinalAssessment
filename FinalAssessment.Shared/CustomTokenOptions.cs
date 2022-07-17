@@ -8,8 +8,6 @@ namespace FinalAssessment.Shared
 {
     public class CustomTokenOptions
     {
-        
-        
         public string Issuer { get; set; }
         public int AccessTokenExpiration { get; set; }
         public int RefreshTokenExpiration { get; set; }

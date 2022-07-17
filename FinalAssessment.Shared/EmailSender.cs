@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Net.Mail;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Net.Mail;
+
 
 namespace FinalAssessment.Shared
 {
@@ -12,7 +7,8 @@ namespace FinalAssessment.Shared
     public class EmailSender
     {
 
-        public void SendIt(List<string> adresses, string filePath)
+        //sending emails process
+        public void SendIt(List<string> adresses, string filePath, string emailsubject)
         {
             foreach(string adress in adresses)
             {
@@ -20,7 +16,7 @@ namespace FinalAssessment.Shared
                 var mail = new MailMessage();
                 mail.From = new MailAddress("finalassessment@link.com");
                 mail.To.Add(adress);
-                mail.Subject = "En Fazla 5 Ticari Faliyet - " + DateTime.Now.ToShortDateString();
+                mail.Subject = emailsubject;
                 mail.IsBodyHtml = true;
                 string htmlBody;
                 htmlBody = "İyi Çalışmalar";

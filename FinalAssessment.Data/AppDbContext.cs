@@ -18,6 +18,7 @@ namespace FinalAssessment.Data
         public DbSet<CustomerApp> Customers { get; set; }
         public DbSet<MonthlyReportDto> Sp_Monthly { get; set; }
         public DbSet<WeeklyReportDto> Sp_Weekly { get; set; }
+        public DbSet<string> Sp_Emails { get; set; }
         public DbSet<UserRefreshToken> UserRefreshTokens { get; set; }
  
          

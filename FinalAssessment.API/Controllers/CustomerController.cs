@@ -37,9 +37,9 @@ namespace FinalAssessment.API.Controllers
 
    
         [HttpGet("/MonthlyCityReportforExcel")]
-        public async Task<IActionResult> ReportMonthly()
+        public ActionResult ReportMonthly()
         {
-            return Ok(await _service.GetCityListWithSP());
+            return Ok(_service.GetCityListWithSP());
         }
 
         
@@ -55,6 +55,7 @@ namespace FinalAssessment.API.Controllers
         }
 
 
+        //Adding customer with watermark.
         [Authorize(Roles="Admin,Editor")]
         [HttpPost]
         public async Task<IActionResult> Add(CustomerDto customerDto)

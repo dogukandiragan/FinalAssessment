@@ -18,15 +18,12 @@ namespace FinalAssessment.Service.Services
         }
 
 
-        public async Task<List<WeeklyReportDto>> GetTransactionListBySP()
+        //getting top 5 transactions
+        public List<WeeklyReportDto> GetTransactionListBySP()
         {
             WeeklyReport wero = new WeeklyReport(_context);
-            return await  wero.GetTopTransactionListWithSP();
+            return wero.GetTopTransactionListWithSP();
         }
-
-
-       
-
 
     }
 }

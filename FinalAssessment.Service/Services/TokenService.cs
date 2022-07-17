@@ -11,7 +11,11 @@ using System.Security.Cryptography;
 using System.Text;
 
 namespace FinalAssessment.Service.Services
-{
+{  
+    
+    // JWT Token Processes
+
+
     public class TokenService : ITokenService
     {
         private readonly UserManager<UserApp> _userManager;
@@ -23,6 +27,9 @@ namespace FinalAssessment.Service.Services
             _userManager = userManager;
             _tokenOption = options.Value;
         }
+
+
+     
 
         private string CreateRefreshToken()
 

@@ -25,11 +25,7 @@ namespace FinalAssessment.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateRole(string name)
         {
-         
-
             return Ok(await _roleManager.CreateAsync(new IdentityRole { Name = name }));
-
-
         }
 
 

@@ -8,7 +8,7 @@ namespace FinalAssessment.Core.Services
     public interface ITransactionService : IService<TransactionApp>
     {
 
-       Task<List<WeeklyReportDto>> GetTransactionListBySP();
+       List<WeeklyReportDto> GetTransactionListBySP();
     }
 
 }

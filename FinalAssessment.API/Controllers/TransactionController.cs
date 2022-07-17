@@ -36,9 +36,9 @@ namespace FinalAssessment.API.Controllers
 
 
         [HttpGet("/WeeklyTransctionReportforExcel")]
-        public async Task<IActionResult> ReportWeekly()
+        public IActionResult ReportWeekly()
         {
-            return Ok(await _service.GetTransactionListBySP());
+            return Ok(_service.GetTransactionListBySP());
         }
 
 

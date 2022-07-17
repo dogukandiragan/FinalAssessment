@@ -16,11 +16,12 @@ namespace FinalAssessment.Service.Services
             _context = context;
         }
 
-        public async Task<List<MonthlyReportDto>> GetCityListWithSP()
+
+        //getting customers count by city
+        public List<MonthlyReportDto> GetCityListWithSP()
         {
             MonthlyReport moro = new MonthlyReport(_context);
-            return await moro.GetCityListWithSP();
-          
+            return moro.GetCityListWithSP();      
         }
 
     }
