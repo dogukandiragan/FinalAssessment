@@ -20,7 +20,7 @@
 ### Teknolojiler
 - Veritabanı : PostgreSQL
 - Proje : Asp.Net Core API
-- Rapor : Quartz Library
-- Message Broker : RabbitMQ
+- Rapor : Quartz Library, ClosedXML
+- Message Broker : RabbitMQ, MassTransit
 
 
